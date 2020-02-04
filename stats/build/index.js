@@ -2,11 +2,11 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var CsvFileReader_1 = require("./CsvFileReader");
 var MatchReader_1 = require("./MatchReader");
+var ConsoleReport_1 = require("./reportTargets/ConsoleReport");
+var WinsAnalysis_1 = require("./analyzers/WinsAnalysis");
+var Summary_1 = require("./Summary");
 var csvFileReader = new CsvFileReader_1.CsvFileReader('football.csv');
 var matchReader = new MatchReader_1.MatchReader(csvFileReader);
 matchReader.load();
-console.log(matchReader.matches);
-// const reader = new MatchReader('football.csv');
-// reader.read();
-// console.log(reader.data[0]);
-console.log("Man United won " + manUnitedWins + " games");
+var summary = new Summary_1.Summary(new WinsAnalysis_1.WinsAnalysis('Man United'), new ConsoleReport_1.ConsoleReport());
+summary.buildAndPrintReport(matchReader.matches);

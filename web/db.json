@@ -2,13 +2,28 @@
   "users": [
     {
       "id": 1,
-      "name": "new name",
-      "age": 15
+      "name": "alin",
+      "age": 28
     },
     {
       "name": "alin dumitru",
       "age": 21,
       "id": 2
+    },
+    {
+      "name": "NAME",
+      "age": 20,
+      "id": 3
+    },
+    {
+      "name": "NAME",
+      "age": 76,
+      "id": 4
+    },
+    {
+      "name": "alin",
+      "age": 20,
+      "id": 5
     }
   ]
 }
